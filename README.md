@@ -51,7 +51,7 @@ This project implements a custom route finder that overcomes several limitations
 
    ```bash
    git clone https://github.com/Harshit2k1/Enhanced-SUMO-Route-Finder.git
-   cd enhanced-sumo-route-finder
+   cd Enhanced-SUMO-Route-Finder
    ```
 
 3. **Set Up Your Environment:**
@@ -94,7 +94,7 @@ This project implements a custom route finder that overcomes several limitations
   The route finder reduces redundant computations through efficient data structures and global cycle prevention, leading to faster route discovery.
 
 - **Effective Pruning:**  
-  The BFS algorithm and a global visited set minimizes the number of paths that need to be explored, ensuring that performance is maintained even in large networks.
+  The BFS algorithm and a global visited set minimize the number of paths that need to be explored, ensuring that performance is maintained even in large networks.
 
 ---
 
@@ -106,7 +106,7 @@ While this enhanced route finder offers significant performance improvements and
 The tool outputs only the first discovered route per node (often the shortest) rather than exploring all possible routes. This design choice was made to reduce computational overhead and speed up processing. By selecting the first encountered route, the algorithm avoids the exponential growth of alternative paths, ensuring rapid termination and efficient resource utilization.
 
 ### 2. Aggressive Pruning via Global Visited Set
-The use of a global visited set to prevent cycles may inadvertently filter out some valid routes that require revisiting nodes through alternative paths. Aggressive pruning is essential to prevent infinite loops and reduce the search space significantly. This tradeoff prioritizes reliability and performance, accepting that a few potential routes might be missed in exchange for dramatically faster execution.
+Using a global visited set to prevent cycles may inadvertently filter out some valid routes that require revisiting nodes through alternative paths. Aggressive pruning is essential to prevent infinite loops and reduce the search space significantly. This tradeoff prioritizes reliability and performance, accepting that a few potential routes might be missed in exchange for dramatically faster execution.
 
 ### 3. Hard Iteration Cap
 A maximum iteration limit is imposed, which might stop the exploration before discovering all possible routes in very large or highly connected networks. The iteration cap prevents the algorithm from running indefinitely, ensuring that the tool remains responsive even in complex networks. This safeguard is crucial for maintaining predictable and stable execution times.
@@ -116,7 +116,7 @@ The use of Breadth-First Search (BFS) naturally biases the tool towards finding 
 
 ---
 
-Overall, these tradeoffs were intentionally chosen to strike a balance between efficiency, safety, and practical usability. The enhancements address key issues such as indefinite execution and problematic edge ID parsing found in the original tool, making this solution a robust option for many applications despite the noted limitations.
+Overall, these tradeoffs were intentionally chosen to balance efficiency, safety, and practical usability. The enhancements address key issues such as indefinite execution and problematic edge ID parsing found in the original tool, making this solution a robust option for many applications despite the noted limitations.
 
 
 ## Contributing
