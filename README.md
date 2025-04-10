@@ -133,4 +133,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgements
 
 Special thanks to the SUMO community and developers whose tools and documentation have been invaluable in creating and enhancing this route finder tool.
-```
